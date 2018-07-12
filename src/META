@@ -1,8 +1,0 @@
-# Specifications for the "getarg" library
-#name = "getarg"
-version = "0.4"
-description = "Command-line option parser inspired by GNU getopt"
-#requires = ""
-#directory = "+getarg"
-archive(byte) = "getarg.cma"
-archive(native) = "getarg.cmxa"
