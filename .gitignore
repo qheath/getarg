@@ -1,7 +1,1 @@
-# make
-/test
-/test.byte
-/test.native
-
-# make doc
-/src.docdir
+.merlin

@@ -1,0 +1,31 @@
+opam-version: "2.0"
+name: "getarg"
+version: "0.5"
+maintainer: "Quentin Heath <12143333+qheath@users.noreply.github.com>"
+authors: "Quentin Heath <12143333+qheath@users.noreply.github.com>"
+license: "GPL-3"
+#homepage: ""
+#dev-repo: ""
+#bug-reports: ""
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs "@install"]
+  ["jbuilder" "build" "-p" name "-j" jobs "@runtest"] {with-test}
+  ["jbuilder" "build" "-p" name "-j" jobs "@doc"] {with-doc}
+]
+
+depends: [
+  "jbuilder" {build}
+]
+synopsis: "command-line option parser"
+description: """
+This library offers an alternative to the standard OCaml Arg module
+with a support for short and long options (à la getopt).
+It is similar to Getopt and Getopts, with a few key differences:
+  - long options (with an expanded form that can take a mandatory
+    argument)
+  - no expanded form for short options with optional arguments
+  - clusters of short options (mixing with and without arguments)"""
+#url {
+#  src: ""
+#  checksum: ""
+#}
