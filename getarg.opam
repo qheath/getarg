@@ -16,7 +16,7 @@ build: [
 depends: [
   "jbuilder" {build}
 ]
-synopsis: "command-line option parser"
+synopsis: "Command-line option parser"
 description: """
 This library offers an alternative to the standard OCaml Arg module
 with a support for short and long options (à la getopt).
