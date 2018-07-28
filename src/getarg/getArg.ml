@@ -19,10 +19,6 @@
 
 type opt_type = Long of string | Short of char
 
-let to_string = function
-  | Long s -> Printf.sprintf "--%s" s
-  | Short c -> Printf.sprintf "-%c" c
-
 let string_of_char c =
   String.make 1 c
 
@@ -117,9 +113,9 @@ let build_help_buffer auto_help longopts usage_msg =
               let rev_strs =
                 if arg<>"" then ">"::arg::" <"::rev_strs
                 else begin match cb with
-                  | String s -> " <string>"::rev_strs
-                  | Int i -> " <int>"::rev_strs
-                  | Float f -> " <float>"::rev_strs
+                  | String _ -> " <string>"::rev_strs
+                  | Int _ -> " <int>"::rev_strs
+                  | Float _ -> " <float>"::rev_strs
                 end
               in
               if mandatory then rev_strs else "?"::rev_strs
@@ -227,7 +223,7 @@ let getopt_long longopts =
               (* long option *)
               let cb_opt =
                 let opt,arg_opt = get_collapsed_long arg in
-                let failure without_cb remainder =
+                let failure _without_cb _remainder =
                   (* forbidden argument *)
                   needless opt
                 in

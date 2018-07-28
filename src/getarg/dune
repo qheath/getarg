@@ -1,0 +1,5 @@
+(library
+ (name getArg)
+ (public_name getarg)
+ (synopsis "command-line option parser")
+ (modules ("GetArg")))

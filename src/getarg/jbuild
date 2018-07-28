@@ -1,8 +1,0 @@
-(jbuild_version 1)
-
-(library
- ((name getArg)
-  (public_name getarg)
-  (synopsis "command-line option parser")
-  (modules (GetArg))
-  (flags (:standard -warn-error A))))
