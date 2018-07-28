@@ -1,0 +1,13 @@
+(env
+ (dev
+  (flags (:standard -w +a -warn-error +a)))
+ (release
+  (flags (:standard -w +a))))
+
+(alias
+ (name    runtest)
+ (deps    (:test src/test.bc))
+ (action
+  (progn
+   (run %{test} --help)
+   (run %{test} -abfoo -ac42 --alpha bar --gamma 44 --delta 45 --gamma=46 --delta=47))))

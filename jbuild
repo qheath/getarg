@@ -1,9 +1,0 @@
-(jbuild_version 1)
-
-(alias
- ((name runtest)
-  (deps (src/test.bc))
-  (action
-   (progn
-    (run ${<} --help)
-    (run ${<} -abfoo -ac42 --alpha bar --gamma 44 --delta 45 --gamma=46 --delta=47)))))
