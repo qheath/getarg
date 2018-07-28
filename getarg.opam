@@ -1,20 +1,19 @@
 opam-version: "2.0"
-name: "getarg"
-version: "0.5"
+version: "0.6"
 maintainer: "Quentin Heath <12143333+qheath@users.noreply.github.com>"
 authors: "Quentin Heath <12143333+qheath@users.noreply.github.com>"
+homepage: "https://github.com/qheath/getarg"
+bug-reports: "https://github.com/qheath/getarg/issues"
+dev-repo: "git://github.com/qheath/getarg.git"
 license: "GPL-3"
-#homepage: ""
-#dev-repo: ""
-#bug-reports: ""
 build: [
-  ["jbuilder" "build" "-p" name "-j" jobs "@install"]
-  ["jbuilder" "build" "-p" name "-j" jobs "@runtest"] {with-test}
-  ["jbuilder" "build" "-p" name "-j" jobs "@doc"] {with-doc}
+  ["dune" "build" "-p" name "-j" jobs "@install"]
+  ["dune" "build" "-p" name "-j" jobs "@runtest"] {with-test}
+  ["dune" "build" "-p" name "-j" jobs "@doc"] {with-doc}
 ]
 
 depends: [
-  "jbuilder" {build}
+  "dune" {build}
 ]
 synopsis: "Command-line option parser"
 description: """
