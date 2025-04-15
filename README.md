@@ -1,3 +1,8 @@
+DEPRECATED
+==========
+
+features are uncluded in [cmdliner](https://github.com/dbuenzli/cmdliner)
+
 Command-line option parser
 ==========================
 
